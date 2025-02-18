@@ -1,4 +1,0 @@
-Target dependency graph (2 targets)
-Target 'EmptyWindowApp' in project 'EmptyWindowApp'
-➜ Explicit dependency on target 'ZERO_CHECK' in project 'EmptyWindowApp'
-Target 'ZERO_CHECK' in project 'EmptyWindowApp' (no dependencies)

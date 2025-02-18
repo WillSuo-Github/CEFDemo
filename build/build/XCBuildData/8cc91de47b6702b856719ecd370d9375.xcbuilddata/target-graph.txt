@@ -1,7 +1,0 @@
-Target dependency graph (3 targets)
-Target 'ALL_BUILD' in project 'EmptyWindowApp'
-➜ Explicit dependency on target 'ZERO_CHECK' in project 'EmptyWindowApp'
-➜ Explicit dependency on target 'EmptyWindowApp' in project 'EmptyWindowApp'
-Target 'EmptyWindowApp' in project 'EmptyWindowApp'
-➜ Explicit dependency on target 'ZERO_CHECK' in project 'EmptyWindowApp'
-Target 'ZERO_CHECK' in project 'EmptyWindowApp' (no dependencies)
