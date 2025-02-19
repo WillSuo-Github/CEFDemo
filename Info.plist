@@ -6,7 +6,7 @@
     <key>CFBundleExecutable</key>
     <string>EmptyWindowApp</string>
     <key>CFBundleIdentifier</key>
-    <string>com.example.EmptyWindowApp</string>
+    <string>com.ws.cefdemo</string>
     <key>CFBundleName</key>
     <string>EmptyWindowApp</string>
     <key>CFBundleVersion</key>
