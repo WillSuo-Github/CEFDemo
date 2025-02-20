@@ -43,39 +43,6 @@ endif()
 
 add_subdirectory(${CEF_LIBCEF_DLL_WRAPPER_PATH} libcef_dll_wrapper)
 
-# cefsimple sources.
-set(CEFSIMPLE_SRCS
-    simple_app.cc
-    simple_app.h
-    simple_handler.cc
-    simple_handler.h
-)
-set(CEFSIMPLE_SRCS_LINUX
-    cefsimple_linux.cc
-    simple_handler_linux.cc
-)
-set(CEFSIMPLE_SRCS_MAC
-    cefsimple_mac.mm
-    simple_handler_mac.mm
-)
-set(CEFSIMPLE_SRCS_WINDOWS
-    cefsimple_win.cc
-    resource.h
-    simple_handler_win.cc
-)
-APPEND_PLATFORM_SOURCES(CEFSIMPLE_SRCS)
-source_group(cefsimple FILES ${CEFSIMPLE_SRCS})
-
-set(CEFSIMPLE_WIN_SRCS_WINDOWS
-    win/cefsimple.rc
-)
-APPEND_PLATFORM_SOURCES(CEFSIMPLE_WIN_SRCS)
-source_group(cefsimple\\\\win FILES ${CEFSIMPLE_WIN_SRCS})
-
-set(CEFSIMPLE_SRCS
-    ${CEFSIMPLE_SRCS}
-    ${CEFSIMPLE_WIN_SRCS}
-)
 
 # cefsimple helper sources.
 set(CEFSIMPLE_HELPER_SRCS_MAC
@@ -104,15 +71,8 @@ set(CEFSIMPLE_RESOURCES_SRCS
     ${CEFSIMPLE_RESOURCES_MAC_ENGLISH_LPROJ_SRCS}
 )
 
-#
-# Shared configuration.
-#
-
-
 # Determine the target output directory.
 SET_CEF_TARGET_OUT_DIR()
-
-
 
 #
 # Mac OS X configuration.
@@ -217,10 +177,5 @@ if(OS_MAC)
     set(PREFIXES "mac/")
     COPY_MAC_RESOURCES("${CEFSIMPLE_RESOURCES_SRCS}" "${PREFIXES}" "${CEF_TARGET}" "${CMAKE_CURRENT_SOURCE_DIR}" "${CEF_APP}")
 endif()
-
-
-
-
-
 
 PRINT_CEF_CONFIG()
